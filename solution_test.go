@@ -7,7 +7,7 @@ import (
 
 func TestCalcSquare(t *testing.T) {
 	side_len := 10.0
-	triangle_expected := side_len * side_len / 2
+	triangle_expected := side_len * side_len * math.Sqrt(3) / 4
 	triangle_result := CalcSquare(side_len, SidesTriangle)
 	if triangle_result != triangle_expected {
 		t.Errorf("Got %f, expected %f", triangle_result, triangle_expected)

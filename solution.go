@@ -22,9 +22,9 @@ func CalcSquare(sideLen float64, sidesNum sidesNumber) float64 {
 	var square float64
 	switch sidesNum {
 	case SidesCircle:
-		square = math.Pi * sideLen * sideLen
+		square = sideLen * sideLen * math.Pi
 	case SidesTriangle:
-		square = sideLen * sideLen / 2
+		square = sideLen * sideLen * math.Sqrt(3) / 4
 	case SidesSquare:
 		square = sideLen * sideLen
 	}
